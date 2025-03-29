@@ -1,0 +1,24 @@
+name: Finance Scraper
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Jalankan setiap hari pada jam 00:00 UTC
+  workflow_dispatch:  # Bisa dijalankan secara manual
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: pip install yfinance pandas gspread gspread_dataframe oauth2client
+
+      - name: Run scraper
+        run: python scrapper.py
