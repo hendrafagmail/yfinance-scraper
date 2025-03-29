@@ -2,7 +2,7 @@ import yfinance as yf
 import pandas as pd
 import gspread
 from gspread_dataframe import set_with_dataframe
-from google.colab import auth
+#from google.colab import auth
 from oauth2client.service_account import ServiceAccountCredentials
 
 #baca json credentials
