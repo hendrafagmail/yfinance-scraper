@@ -28,7 +28,7 @@ spreadsheet = gc.open("Saham Indonesia")  # Ganti dengan nama Google Sheets Anda
 worksheet = spreadsheet.worksheet("tabelincome")  # Gunakan worksheet "tabelincome"
 
 # 🔹 Daftar saham Indonesia di Yahoo Finance
-tickers = ["AMRT.JK", "ITMG.JK", "ADRO.JK", "ASII.JK"]
+tickers = ["AMRT.JK", "ITMG.JK", "ADRO.JK", "ASII.JK", "BBCA.JK", "LPPF.JK"]
 
 # 🔹 Ambil Data Keuangan
 data_list = []
