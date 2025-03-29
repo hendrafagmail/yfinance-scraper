@@ -1,4 +1,4 @@
-- name: Cek apakah Secret terbaca
+ name: Cek apakah Secret terbaca
   env:
     GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
   run: |
