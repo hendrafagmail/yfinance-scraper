@@ -5,6 +5,16 @@ from gspread_dataframe import set_with_dataframe
 from google.colab import auth
 from oauth2client.service_account import ServiceAccountCredentials
 
+#baca json credentials
+import json
+import os
+# 🔹 Ambil credentials dari GitHub Secrets
+credentials_json = os.getenv("GOOGLE_CREDENTIALS")
+# 🔹 Simpan sementara sebagai file credentials.json
+with open("credentials.json", "w") as f:
+    f.write(credentials_json)
+
+
 # 🔹 Autentikasi Google Colab ke Google Drive
 auth.authenticate_user()
 
